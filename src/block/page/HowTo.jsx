@@ -10,17 +10,17 @@ export default function HowTo() {
                         rest. It's designed to maximize efficiency by providing
                         a highly effective workout in a shorter time compared to
                         traditional steady-state cardio.`,
-      url: "/hiit",
+      url: "/training/pages/hiit",
     },
     {
       title: "STRENGTH",
       description: `Strength training, also known as resistance training, involves exercises designed to improve muscle strength and endurance by working against a resistance. This resistance can come from your own body weight, free weights (like dumbbells and kettlebells), resistance bands, or machines.`,
-      url: "/strength",
+      url: "/training/pages/strength",
     },
     {
       title: "ENDURANCE",
       description: `Endurance training, also known as aerobic or stamina training, focuses on improving the body's ability to sustain physical activity over extended periods. It involves exercises that increase your heart rate and breathing for an extended duration, enhancing the efficiency of your cardiovascular and respiratory systems.`,
-      url: "/endurance",
+      url: "/training/pages/endurance",
     },
   ];
   return (

@@ -96,7 +96,7 @@ export default function Strength() {
       <div className="px-2">
         <Link href={`/training`}>
           <div className="py-4 px-2 league font-semibold text-lg w-full centralize bg-blue-600 mb-6 shadow-2xl hover:shadow-none pointer text-white">
-            BACK
+            VIEW TRAINING
           </div>
         </Link>
       </div>
