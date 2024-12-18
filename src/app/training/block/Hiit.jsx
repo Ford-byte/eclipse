@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hiit() {
   const benefits = [
     "Improves Cardiovascular Health",
@@ -43,6 +45,13 @@ export default function Hiit() {
             compared to traditional steady-state cardio.
           </p>
         </div>
+      </div>
+      <div className="px-2">
+        <Link href={`/training/pages/hiit`}>
+          <div className="py-4 px-2 league font-semibold text-lg w-full centralize bg-blue-600 mb-6 shadow-2xl hover:shadow-none pointer text-white">
+            VIEW EXERCISES
+          </div>
+        </Link>
       </div>
     </div>
   );

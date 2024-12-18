@@ -19,7 +19,7 @@ export default function Footer() {
     },
     {
       icon: "/facebook.webp",
-      title: "",
+      title: "FACEBOOK",
       details: "@eclipsefitness",
     },
   ];

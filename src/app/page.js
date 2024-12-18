@@ -24,7 +24,7 @@ export default function Home() {
             </h1>
             <div className="flex gap-6 mt-12">
               <div className="custom-button cairo uppercase">Hire a coach</div>
-              <div className="uppercase cairo py-2 px-2 bg-white rounded-md shadow-lg font-semibold hover:shadow-none">TRACK MARCOS</div>
+              <div className="uppercase cairo py-2 px-2 bg-white rounded-md shadow-lg font-semibold hover:shadow-none">Login</div>
             </div>
           </div>
         </div>

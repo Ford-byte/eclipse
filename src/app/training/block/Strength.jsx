@@ -1,101 +1,89 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Strength() {
-  const workout = [
+  const benefits = [
     {
-      image: "/bench.jpg",
-      intensity: "High",
-      duration: "60",
-      time: "seconds",
-      description:
-        "A compound exercise that targets the chest, shoulders, and triceps, while also engaging the core, back, and lower body ",
-      title: "Bench Press",
+      title: "Builds Muscle Mass",
+      list: [
+        "Promotes muscle growth through resistance training",
+        "Enhances muscle strength and endurance",
+      ],
     },
     {
-      image: "/overhead.jpg",
-      intensity: "High",
-      duration: "60",
-      time: "seconds",
-      description:
-        "The overhead press, also known as the shoulder press, military press, or strict press, is a weight training exercise that strengthens the upper body, particularly the shoulders and triceps.",
-      title: "Overhead Press",
+      title: "Improves Bone Density",
+      list: [
+        "Reduces the risk of osteoporosis",
+        "Strengthens bones by applying stress through weightlifting",
+      ],
     },
     {
-      image: "/bicep.jpg",
-      intensity: "High",
-      duration: "60",
-      time: "seconds",
-      description:
-        "A bicep curl is an exercise that builds muscle and strength in the upper arm. Here are some tips for performing a bicep curl.",
-      title: "Bicep Curls",
+      title: "Boosts Metabolic Rate",
+      list: [
+        "Increases resting metabolism as muscle burns more calories than fat",
+        "Supports long-term weight management",
+      ],
+    },
+    {
+      title: "Enhances Functional Strength",
+      list: [
+        "Improves the ability to perform daily activities with ease",
+        "Reduces the risk of injury by strengthening stabilizing muscles",
+      ],
+    },
+    {
+      title: "Improves Mental Health",
+      list: [
+        "Boosts confidence and self-esteem",
+        "Releases endorphins that help reduce stress and improve mood",
+      ],
     },
   ];
+
   return (
-    <div>
-      <div className="relative league">
-        <div className="py-12 flex flex-col gap-y-12 leading-6">
-          <div className="centralize flex flex-col items-center gap-y-4 border-b py-12 border-black">
-            <h1 className="header">About</h1>
-            <p className="text-justify w-2/4">
-              Strength Training involves exercises that are designed to increase
-              muscle strength and endurance by working against resistance. It
-              typically includes movements such as weightlifting, bodyweight
-              exercises, and resistance band exercises. Unlike high-intensity
-              interval training (HIIT), strength training focuses on controlled
-              movements with heavier weights and longer rest periods between
-              sets. This type of workout is ideal for building muscle mass,
-              improving bone density, and enhancing overall functional strength.
-              It can be done using free weights, machines, or just your body
-              weight and is often incorporated into a well-rounded fitness
-              regimen for optimal results.
-            </p>
+    <div className="relative">
+      <div className="py-12 flex flex-col gap-y-12 leading-6">
+        <div className="centralize flex flex-col items-center gap-y-4 border-b py-12 border-black">
+          <h1 className="header">About</h1>
+          <p className="text-justify w-2/4">
+            Strength training, also known as resistance or weight training,
+            focuses on building muscular strength, endurance, and power. It
+            involves exercises that challenge muscles through resistance, such
+            as lifting weights, using resistance bands, or bodyweight exercises,
+            promoting overall physical resilience and functionality.
+          </p>
+        </div>
+        <div className="centralize flex flex-col items-center gap-y-4 border-b py-12 border-black">
+          <h1 className="header">Benefits of Strength Training:</h1>
+          <div className="text-justify w-2/4">
+            {benefits.map((item, index) => (
+              <div key={index} className="mb-4">
+                <h2 className="font-bold">{item.title}</h2>
+                <ul className="list-disc list-inside">
+                  {item.list.map((point, idx) => (
+                    <li key={idx}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
-        <div>
-          {workout &&
-            workout.map((item, index) => {
-              return (
-                <div
-                  className="py-12 flex flex-col gap-y-12 leading-6"
-                  key={index}>
-                  <div
-                    className={`gap-y-4 py-12 border-black centralize ${
-                      index !== workout.length - 1 ? "border-b" : ""
-                    }`}>
-                    <div className="w-2/4">
-                      <div className="grid grid-cols-2">
-                        <div className="bg-gray-200 w-full h-[200px]">
-                          <Image
-                            src={item.image}
-                            width={300}
-                            height={200}
-                            alt="image"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div className="flex flex-col items-center">
-                          <h1 className="header pb-6">{item.title}</h1>
-                          <span className="flex gap-4">
-                            <p>Intensity:</p>
-                            <p>{item.intensity}</p>
-                          </span>
-                          <span className="flex gap-4">
-                            <p>Duration:</p>
-                            <p>
-                              {item.duration} {item.time}
-                            </p>
-                          </span>
-                        </div>
-                      </div>
-                      <div className="py-4 league text-center">
-                        {item.description}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+        <div className="centralize flex flex-col items-center gap-y-4 py-12">
+          <h1 className="header">Why Should You Try Strength Training?</h1>
+          <p className="text-justify w-2/4">
+            Strength training is a key component of physical fitness, offering
+            numerous benefits for both the body and mind. Whether your goal is
+            to improve functional strength, enhance your physique, or simply
+            stay active, strength training provides a foundation for a healthy
+            and balanced lifestyle.
+          </p>
         </div>
+      </div>
+      <div className="px-2">
+        <Link href={`/training/pages/strength`}>
+          <div className="py-4 px-2 league font-semibold text-lg w-full centralize bg-blue-600 mb-6 shadow-2xl hover:shadow-none pointer text-white">
+            VIEW EXERCISES
+          </div>
+        </Link>
       </div>
     </div>
   );

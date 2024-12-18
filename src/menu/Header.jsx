@@ -25,7 +25,7 @@ export default function Header() {
             <div className="pointer">About</div>
           </Link>
           <Link href={`/training`}>
-            <div className="pointer">Traning</div>
+            <div className="pointer">Training</div>
           </Link>
           <div className="py-2 rounded-md shadow-lg hover:shadow-none px-3 bg-gradient-to-r from-[#F45666] to-[#9352F4] cairo">
             LOG IN
