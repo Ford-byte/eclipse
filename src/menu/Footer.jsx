@@ -23,14 +23,15 @@ export default function Footer() {
       details: "@eclipsefitness",
     },
   ];
+
   return (
     <div className="relative h-fit bg-gradient-to-r from-[#1056A5] to-[#142B45] pt-12 pb-4">
-      <div className="flex flex-col gap-y-24">
+      <div className="flex flex-col gap-y-6 md:gap-y-24">
         <div className="flex justify-center">
           <h1 className="font-bold text-3xl text-white league">GET IN TOUCH</h1>
         </div>
         <div className="centralize">
-          <div className="grid grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {data
               ? data?.map((item, index) => {
                   return (
@@ -70,7 +71,7 @@ export default function Footer() {
           />
           <div className="border absolute border-white w-full mt-2"></div>
         </div>
-        <div className="flex flex-col items-center justify-center text-white">
+        <div className="flex flex-col items-center justify-center text-white px-6 md:px-0 text-justify">
           <div>2024 - Eclipse Fitness . All Rights Reserved </div>
           <div>
             Website Design & Development: Eclipse IT Department Management Team:

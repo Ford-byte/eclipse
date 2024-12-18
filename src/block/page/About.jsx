@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function About() {
   return (
     <div className="relative">
-      <div className="grid grid-cols-2">
+      <div className="md:grid grid-cols-2">
         <div className="relative h-[550px]">
           <Image
             src={`/backgroundTwo.jpg`}
@@ -13,8 +13,8 @@ export default function About() {
             className="w-full h-full object-cover"
           />
           {/* Text container */}
-          <div className="absolute inset-0 flex items-center justify-center w-full h-full">
-            <div className="text-left px-6 text-white flex flex-col gap-y-4">
+          <div className="absolute inset-0 flex items-center justify-center w-full h-full px-4 md:px-0">
+            <div className="text-left md:px-6 text-white flex flex-col gap-y-4">
               <h1 className="text-white text-7xl font-bold">
                 About Eclipse Fitness Gym.
               </h1>
@@ -30,9 +30,9 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="px-12 py-6 flex flex-col gap-y-12">
+        <div className="px-4 md:px-12 py-6 flex flex-col gap-y-12">
           <div className="flex justify-center text-center">
-            <h1 className="text-4xl font-bold px-12 text-[#0065FF]">
+            <h1 className="text-3xl md:text-4xl font-bold px-2 md:px-12 text-[#0065FF]">
               Join Eclipse and Transform Your Body and Mind
             </h1>
           </div>

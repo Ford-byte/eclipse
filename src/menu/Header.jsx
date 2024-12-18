@@ -1,7 +1,16 @@
+"use client";
+import Close from "@/icons/Close";
+import Menu from "@/icons/Menu";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Header() {
+  const [menuOpen, isMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    isMenuOpen(!menuOpen);
+  };
   return (
     <div className=" py-4 px-4 primary fixed top-0 w-full z-20">
       <div className="flex justify-between">
@@ -17,7 +26,39 @@ export default function Header() {
             />
           </Link>
         </div>
-        <div className="flex items-center gap-12 px-4">
+        <div className="flex md:hidden items-center px-4">
+          <Menu className={`size-6 stroke-white`} onClick={toggleMenu} />
+        </div>
+        {menuOpen && (
+          <div className="fixed top-0 inset-0 w-full h-full bg-blue-600 flex items-center justify-center">
+            <div
+              className="fixed top-0 right-0 m-2 p-2 rounded shadow-lg hover:shadow-none border"
+              onClick={toggleMenu}>
+              <Close className={`size-4 stroke-white`} onClick={toggleMenu} />
+            </div>
+            <div className="flex flex-col gap-4 font-bold text-2xl cario uppercase text-center">
+              <Link href={`/`}>
+                <div className="pointer" onClick={toggleMenu}>
+                  Home
+                </div>
+              </Link>
+              <Link href={`/about`}>
+                <div className="pointer" onClick={toggleMenu}>
+                  About
+                </div>
+              </Link>
+              <Link href={`/training`}>
+                <div className="pointer" onClick={toggleMenu}>
+                  Training
+                </div>
+              </Link>
+              <span className="py-2 rounded-md shadow-lg hover:shadow-none px-3 bg-gradient-to-r from-[#F45666] to-[#9352F4] cairo">
+                Login
+              </span>
+            </div>
+          </div>
+        )}
+        <div className="hidden md:flex items-center gap-12 px-4">
           <Link href={`/`}>
             <div className="pointer">Home</div>
           </Link>

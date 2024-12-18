@@ -24,33 +24,33 @@ export default function HowTo() {
     },
   ];
   return (
-    <div className="relative h-screen bg-[#372F2F]">
-      <div className="p-12 flex flex-col gap-12">
+    <div className="relative h-fit bg-[#372F2F]">
+      <div className="p-4 md:p-12 flex flex-col gap-12">
         <div className="flex justify-center flex-col items-center gap-y-2">
-          <h1 className="text-white text-center text-4xl league font-bold">
+          <h1 className="text-white text-center text-2xl md:text-4xl league font-bold">
             DON’T KNOW HOW TO START?
             <br />
             TRY OUT OUR TRAININGS.
           </h1>
-          <p className="text-white text-sm league">
+          <p className="text-white text-xs md:text-sm league text-center">
             Step by step challenges to keep you strong and motivated.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-12">
           {how
             ? how?.map((item, index) => {
                 return (
                   <div
-                    className="bg-white rounded-lg shadow-md h-[400px] px-12"
+                    className="bg-white rounded-lg shadow-md h-fit px-4 md:px-12"
                     key={index}>
-                    <div className="py-12 flex items-center flex-col gap-4">
-                      <h1 className="font-bold text-3xl">{item.title}</h1>
-                      <p className="text-justify cairo font-semibold    ">
+                    <div className="py-6 md:py-8 flex items-center flex-col gap-4">
+                      <h1 className="font-bold text-xl md:text-3xl">{item.title}</h1>
+                      <p className="text-justify text-sm cairo font-semibold ">
                         {item.description}
                       </p>
                       <div className="w-full">
                         <Link href={item.url}>
-                          <button className="py-2 bg-blue-600 w-full my-2 shadow-lg hover:shadow-none">
+                          <button className="py-2 bg-blue-600 w-full shadow-lg hover:shadow-none">
                             VIEW EXERCISE
                           </button>
                         </Link>
