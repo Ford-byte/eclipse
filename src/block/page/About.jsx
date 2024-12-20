@@ -13,8 +13,8 @@ export default function About() {
             className="w-full h-full object-cover"
           />
           {/* Text container */}
-          <div className="absolute inset-0 flex items-center justify-center w-full h-full px-4 md:px-0">
-            <div className="text-left md:px-6 text-white flex flex-col gap-y-4">
+          <div className="absolute inset-0 flex items-center justify-center w-full h-full px-4 md:px-0 bg-black md:bg-opacity-20 bg-opacity-40">
+            <div className="text-left md:px-6 text-white flex flex-col gap-y-4 ">
               <h1 className="text-white text-7xl font-bold">
                 About Eclipse Fitness Gym.
               </h1>
