@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+
 export default function Strength() {
   const workout = [
     {
@@ -32,7 +33,7 @@ export default function Strength() {
   ];
 
   return (
-    <div>
+    <div className="">
       <div className="relative">
         <div className="relative">
           <Image
@@ -40,63 +41,53 @@ export default function Strength() {
             width={1000}
             height={1000}
             alt="background"
-            className="h-[500px] w-full"
+            className="h-[300px] md:h-[500px] w-full object-cover"
           />
-          <div className="absolute inset-0 flex justify-center items-center text-white text-shadow-lg text-7xl font-bold league">
-            Hiit exercise
+          <div className="absolute inset-0 flex justify-center items-center text-white text-center text-4xl md:text-7xl font-bold league">
+            Hiit Exercise
           </div>
         </div>
       </div>
-      <div className="relative league">
-        <div>
-          {workout &&
-            workout.map((item, index) => {
-              return (
-                <div
-                  className="py-12 flex flex-col gap-y-12 leading-6"
-                  key={index}>
-                  <div
-                    className={`gap-y-4 py-12 border-black centralize ${
-                      index !== workout.length - 1 ? "border-b" : ""
-                    }`}>
-                    <div className="w-2/4">
-                      <div className="grid grid-cols-2">
-                        <div className="bg-gray-200 w-full h-[200px]">
-                          <Image
-                            src={item.image}
-                            width={300}
-                            height={200}
-                            alt="image"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div className="flex flex-col items-center">
-                          <h1 className="header pb-6">{item.title}</h1>
-                          <span className="flex gap-4">
-                            <p>Intensity:</p>
-                            <p>{item.intensity}</p>
-                          </span>
-                          <span className="flex gap-4">
-                            <p>Duration:</p>
-                            <p>
-                              {item.duration} {item.time}
-                            </p>
-                          </span>
-                        </div>
-                      </div>
-                      <div className="py-4 league text-center">
-                        {item.description}
-                      </div>
-                    </div>
-                  </div>
+      <div className="mt-12 league container mx-auto">
+        {workout.map((item, index) => (
+          <div
+            className={`py-8 md:py-12 flex flex-col gap-y-8 md:gap-y-12 ${
+              index !== workout.length - 1 ? "border-b border-black" : ""
+            }`}
+            key={index}>
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="flex-shrink-0 w-full md:w-1/2">
+                <Image
+                  src={item.image}
+                  width={600}
+                  height={400}
+                  alt="workout image"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex flex-col justify-center text-center md:text-left">
+                <h1 className="text-2xl md:text-3xl font-semibold pb-4">
+                  {item.title}
+                </h1>
+                <div className="space-y-2">
+                  <p>
+                    <span className="font-semibold">Intensity:</span>{" "}
+                    {item.intensity}
+                  </p>
+                  <p>
+                    <span className="font-semibold">Duration:</span>{" "}
+                    {item.duration} {item.time}
+                  </p>
                 </div>
-              );
-            })}
-        </div>
+                <p className="mt-4 text-gray-600">{item.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="px-2">
+      <div className="mx-6 mt-8">
         <Link href={`/training`}>
-          <div className="py-4 px-2 league font-semibold text-lg w-full centralize bg-blue-600 mb-6 shadow-2xl hover:shadow-none pointer text-white">
+          <div className="py-3 my-2 px-6 league font-semibold text-lg text-center bg-blue-600 text-white shadow-md hover:bg-blue-700 transition w-full">
             VIEW TRAINING
           </div>
         </Link>

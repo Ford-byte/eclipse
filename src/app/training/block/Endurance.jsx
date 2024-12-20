@@ -43,8 +43,10 @@ export default function Endurance() {
     <div className="relative">
       <div className="py-12 flex flex-col gap-y-12 leading-6">
         <div className="centralize flex flex-col items-center gap-y-4 border-b py-12 border-black">
-          <h1 className="header text-center text-2xl sm:text-3xl font-bold">About</h1>
-          <p className="text-justify max-w-[90%] sm:max-w-[70%]">
+          <h1 className="header text-center text-2xl sm:text-3xl lg:text-4xl font-bold">
+            About
+          </h1>
+          <p className="text-justify max-w-[90%] sm:max-w-[70%] lg:max-w-[60%] text-base sm:text-lg">
             Endurance training, also known as aerobic or stamina training,
             focuses on improving the body's ability to sustain physical activity
             over extended periods. It involves exercises that increase your
@@ -53,12 +55,16 @@ export default function Endurance() {
           </p>
         </div>
         <div className="centralize flex flex-col items-center gap-y-4 border-b py-12 border-black">
-          <h1 className="header text-center text-2xl sm:text-3xl font-bold">Benefits of Endurance:</h1>
-          <div className="text-justify max-w-[90%] sm:max-w-[70%]">
+          <h1 className="header text-center text-2xl sm:text-3xl lg:text-4xl font-bold">
+            Benefits of Endurance:
+          </h1>
+          <div className="text-justify max-w-[90%] sm:max-w-[70%] lg:max-w-[60%] text-base sm:text-lg">
             {benefits.map((item, index) => (
               <div key={index} className="mb-6">
-                <h2 className="font-bold text-lg sm:text-xl">{item.title}</h2>
-                <ul className="list-disc list-inside">
+                <h2 className="font-bold text-lg sm:text-xl lg:text-2xl">
+                  {item.title}
+                </h2>
+                <ul className="list-disc list-inside pl-4">
                   {item.list.map((point, idx) => (
                     <li key={idx}>{point}</li>
                   ))}
@@ -68,8 +74,10 @@ export default function Endurance() {
           </div>
         </div>
         <div className="centralize flex flex-col items-center gap-y-4 py-12">
-          <h1 className="header text-center text-2xl sm:text-3xl font-bold">Why Should You Try HIIT?</h1>
-          <p className="text-justify max-w-[90%] sm:max-w-[70%]">
+          <h1 className="header text-center text-2xl sm:text-3xl lg:text-4xl font-bold">
+            Why Should You Try HIIT?
+          </h1>
+          <p className="text-justify max-w-[90%] sm:max-w-[70%] lg:max-w-[60%] text-base sm:text-lg">
             Endurance training is an essential component of overall fitness,
             promoting a healthier heart, better stamina, and a more active
             lifestyle. Whether your goal is to run a marathon, improve your
@@ -78,9 +86,10 @@ export default function Endurance() {
           </p>
         </div>
       </div>
-      <div className="px-4 sm:px-8">
-        <Link href={`/training/pages/endurance`}>
-          <div className="py-4 px-4 league font-semibold text-lg sm:text-xl w-full centralize bg-blue-600 mb-6 shadow-2xl hover:shadow-none pointer text-white text-center">
+
+      <div className="px-2 sm:px-4 lg:px-0">
+        <Link href="/training/pages/endurance">
+          <div className="py-4 px-2 league font-semibold text-lg w-full sm:w-auto centralize bg-blue-600 mb-6 shadow-2xl hover:shadow-none pointer text-white text-center">
             VIEW EXERCISES
           </div>
         </Link>
