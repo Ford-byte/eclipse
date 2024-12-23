@@ -44,8 +44,8 @@ export default function Page() {
         alt="background"
         className="fixed top-0 left-0 w-full h-full object-cover"
       />
-      <div className="relative flex justify-center items-center h-screen z-10">
-        <div className="relative h-fit w-11/12 lg:w-3/4 bg-black grid md:grid-cols-2 overflow-hidden shadow-lg">
+      <div className="flex justify-center items-center h-screen z-10">
+        <div className="relative w-full h-fit lg:w-3/4 bg-black grid md:grid-cols-2 overflow-hidden shadow-lg">
           <span className="bg-black w-full z-10 h-full absolute bg-opacity-40"></span>
 
           <Image
@@ -56,10 +56,7 @@ export default function Page() {
             className="absolute w-full h-full object-cover"
           />
 
-          <div
-            className={` z-10 transition-all hidden md:flex justify-center ${
-              isLogin ? "col-start-1" : ""
-            }`}>
+          <div className="z-10 hidden md:flex justify-center">
             <Image
               src="/Logo.webp"
               width={400}
@@ -71,9 +68,9 @@ export default function Page() {
 
           {/* Login Form */}
           {isLogin ? (
-            <div className="z-10 col-start-2">
+            <div className="z-10">
               <div className="relative flex items-center justify-center">
-                <div className="flex flex-col gap-6 p-6 lg:p-12 w-full max-w-md z-10">
+                <div className="flex flex-col gap-6 p-6 lg:p-12 w-full z-10">
                   <div className="text-center">
                     <div className="league font-semibold tracking-widest text-3xl lg:text-4xl">
                       WELCOME
@@ -100,7 +97,7 @@ export default function Page() {
               </div>
             </div>
           ) : (
-            <div className="z-10 col-start-2">
+            <div className="z-10">
               <div className="relative flex items-center justify-center">
                 <div className="flex flex-col gap-2 p-6 lg:p-12 w-full max-w-md z-10">
                   <div className="text-center">
