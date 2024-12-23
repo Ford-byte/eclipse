@@ -94,7 +94,7 @@ export default function Strength() {
       {/* CTA Button */}
       <div className="px-6 w-full">
         <Link href={`/training`}>
-          <div className="w-full py-4 px-2 league font-semibold text-lg centralize bg-blue-600 mb-6 shadow-2xl hover:shadow-none pointer text-white">
+          <div className="w-full py-4 px-2 league font-semibold text-lg centralize bg-blue-600 mb-12 shadow-2xl hover:shadow-none pointer text-white">
             VIEW TRAINING
           </div>
         </Link>

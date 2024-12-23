@@ -44,7 +44,7 @@ export default function Strength() {
       <div className="py-12 flex flex-col gap-y-12 leading-6">
         {/* About Section */}
         <div className="flex flex-col items-center gap-y-4 border-b py-12 border-black">
-          <h1 className="text-2xl md:text-3xl font-bold text-center">About</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-center header">About</h1>
           <p className="text-justify w-full max-w-2xl">
             Strength training, also known as resistance or weight training,
             focuses on building muscular strength, endurance, and power. It
@@ -56,7 +56,7 @@ export default function Strength() {
 
         {/* Benefits Section */}
         <div className="flex flex-col items-center gap-y-4 border-b py-12 border-black">
-          <h1 className="text-2xl md:text-3xl font-bold text-center">Benefits of Strength Training:</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-center header">Benefits of Strength Training:</h1>
           <div className="text-justify w-full max-w-2xl">
             {benefits.map((item, index) => (
               <div key={index} className="mb-4">
@@ -73,7 +73,7 @@ export default function Strength() {
 
         {/* Why Try Section */}
         <div className="flex flex-col items-center gap-y-4 py-12">
-          <h1 className="text-2xl md:text-3xl font-bold text-center">Why Should You Try Strength Training?</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-center header">Why Should You Try Strength Training?</h1>
           <p className="text-justify w-full max-w-2xl">
             Strength training is a key component of physical fitness, offering
             numerous benefits for both the body and mind. Whether your goal is

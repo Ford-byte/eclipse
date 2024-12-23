@@ -88,7 +88,7 @@ export default function Strength() {
       {/* Call-to-Action */}
       <div className="mx-6 mt-8">
         <Link href={`/training`}>
-          <div className="py-3 my-2 px-6 league font-semibold text-lg text-center bg-blue-600 text-white shadow-md hover:bg-blue-700 transition w-full">
+          <div className="py-3 mb-12 px-6 league font-semibold text-lg text-center bg-blue-600 text-white shadow-md hover:bg-blue-700 transition w-full">
             VIEW TRAINING
           </div>
         </Link>
