@@ -2,7 +2,7 @@
 
 import ChevronDown from "@/icons/ChevronDown";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Endurance from "./block/Endurance";
 import Hiit from "./block/Hiit";
 import Strength from "./block/Strength";
@@ -42,8 +42,7 @@ export default function Page() {
             className={`border p-4 border-black shadow-md flex justify-between items-center cursor-pointer ${
               selected === item.label ? "bg-gray-200" : ""
             }`}
-            onClick={() => toggle(item.label)}
-          >
+            onClick={() => toggle(item.label)}>
             <span className="flex justify-center w-full font-bold league text-lg md:text-xl">
               {item.label}
             </span>

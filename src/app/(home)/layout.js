@@ -12,13 +12,23 @@ const cairo = Cairo({
   weight: ['300', '400', '600', '700', '900'],
 });
 
-
 export default function RootLayout({ children }) {
+  const userRole = typeof window !== "undefined" ? localStorage.getItem("USER_ROLE") : null;
+
+  let layoutContent;
+  if (userRole === "admin") {
+    layoutContent = <div className="admin-layout">{children}</div>;
+  } else if (userRole === "member") {
+    layoutContent = <div className="member-layout">{children}</div>;
+  } else {
+    layoutContent = <div className="default-layout">{children}</div>;
+  }
+
   return (
     <html lang="en" className={`${cairo.className} ${leagueSpartan.className}`}>
       <body className="relative">
         <Header />
-        {children}
+        {layoutContent}
       </body>
     </html>
   );
