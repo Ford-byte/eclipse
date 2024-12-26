@@ -1,5 +1,5 @@
 "use client";
-import Authentication from "@/app/modal/authentication";
+import Authentication from "@/app/modal/Authentication";
 import Close from "@/icons/Close";
 import Menu from "@/icons/Menu";
 import Image from "next/image";
