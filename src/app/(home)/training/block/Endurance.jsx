@@ -43,10 +43,10 @@ export default function Endurance() {
     <div className="relative">
       <div className="py-12 flex flex-col gap-y-12 leading-6">
         <div className="centralize flex flex-col items-center gap-y-4 border-b py-12 border-black">
-          <h1 className="header text-center text-2xl sm:text-3xl lg:text-4xl font-bold">
+          <h1 className="text-2xl md:text-3xl font-bold text-center header">
             About
           </h1>
-          <p className="text-justify max-w-[90%] sm:max-w-[70%] lg:max-w-[60%] text-base sm:text-lg">
+          <p className="text-justify w-full max-w-2xl">
             Endurance training, also known as aerobic or stamina training,
             focuses on improving the body's ability to sustain physical activity
             over extended periods. It involves exercises that increase your
@@ -55,13 +55,13 @@ export default function Endurance() {
           </p>
         </div>
         <div className="centralize flex flex-col items-center gap-y-4 border-b py-12 border-black">
-          <h1 className="header text-center text-2xl sm:text-3xl lg:text-4xl font-bold">
+          <h1 className="text-2xl md:text-3xl font-bold text-center header">
             Benefits of Endurance:
           </h1>
-          <div className="text-justify max-w-[90%] sm:max-w-[70%] lg:max-w-[60%] text-base sm:text-lg">
+          <div className="text-justify w-full max-w-2xl">
             {benefits.map((item, index) => (
               <div key={index} className="mb-6">
-                <h2 className="font-bold text-lg sm:text-xl lg:text-2xl">
+                <h2 className="font-bold text-lg md:text-xl">
                   {item.title}
                 </h2>
                 <ul className="list-disc list-inside pl-4">
@@ -74,10 +74,10 @@ export default function Endurance() {
           </div>
         </div>
         <div className="centralize flex flex-col items-center gap-y-4 py-12">
-          <h1 className="header text-center text-2xl sm:text-3xl lg:text-4xl font-bold">
+          <h1 className="text-2xl md:text-3xl font-bold text-center header">
             Why Should You Try HIIT?
           </h1>
-          <p className="text-justify max-w-[90%] sm:max-w-[70%] lg:max-w-[60%] text-base sm:text-lg">
+          <p className="text-justify w-full max-w-2xl">
             Endurance training is an essential component of overall fitness,
             promoting a healthier heart, better stamina, and a more active
             lifestyle. Whether your goal is to run a marathon, improve your

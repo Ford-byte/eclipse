@@ -1,0 +1,35 @@
+[
+  {
+    "fullname": "KURT",
+    "image": "/kurt.jpg",
+    "experience": "Kurt is a highly qualified gym trainer with over 5 years of experience in personal fitness coaching. He holds certifications in strength training, functional fitness, and nutrition planning, making him a well-rounded guide for your fitness journey.",
+    "specialty": [
+      "Weight Loss Programs: Personalized plans to help you shed extra pounds sustainably.",
+      "Strength Training: Build muscle and improve overall power with customized workouts."
+    ],
+    "question": "Kurt’s dedication to his clients’ success goes beyond just workouts—he’s committed to empowering individuals to build lasting healthy habits. Whether you’re a beginner or a seasoned athlete, Kurt will support and challenge you to reach your full potential.",
+    "motto": "Let Kurt guide you toward a healthier, stronger, and more confident version of yourself!"
+  },
+  {
+    "fullname": "FRENAND",
+    "image": "/frenand.jpg",
+    "experience": "With a deep passion for fitness and a decade of experience, Frenand is your go-to expert for achieving your health and wellness goals. Certified in advanced strength training, functional fitness, and holistic wellness, Frenand is committed to helping you unlock your full potential.",
+    "specialty": [
+      "Personalized Fitness Plans: Workouts tailored to your specific goals and fitness level.",
+      "Strength and Conditioning: Build power and endurance for peak performance."
+    ],
+    "question": "Frenand’s dedication, energy, and personalized guidance make every workout a step closer to a healthier you. Whether you’re starting your fitness journey or striving to reach new heights, Frenand is here to support and inspire you to achieve greatness.",
+    "motto": "Let Frenand lead the way to your fitness success!"
+  },
+  {
+    "fullname": "REX",
+    "image": "/rex.jpg",
+    "experience": "Dedicated, skilled, and highly motivated, Rex brings over 7 years of experience in fitness coaching and personal training. Known for his innovative workout strategies and unwavering support, Rex is passionate about helping clients achieve their health and fitness goals.",
+    "specialty": [
+      "Weight Loss & Toning: Proven techniques for shedding fat and sculpting your body.",
+      "High-Intensity Interval Training (HIIT): Fast-paced workouts for maximum results"
+    ],
+    "question": "With a focus on technique, motivation, and measurable progress, Rex ensures that each session is both effective and enjoyable. Whether you're a beginner or a seasoned fitness enthusiast, his guidance will help you unlock new levels of strength and confidence.",
+    "motto": "Start your transformation with Rex today and discover what you’re truly capable of!"
+  }
+]

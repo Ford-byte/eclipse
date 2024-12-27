@@ -1,9 +1,18 @@
+
+"use client";
 import About from "@/block/page/About"
 import HowTo from "@/block/page/HowTo"
 import Footer from "@/menu/Footer"
 import Image from "next/image"
+import { useState } from "react";
+import Authentication from "../modal/Authentication";
+import Link from "next/link";
+import Coach from "@/block/page/Coach";
 
 export default function Home() {
+  const [isLoginOpen, setLoginOpen] = useState(false);
+  const loginToggler = () => setLoginOpen(!isLoginOpen);
+
   return (
     <div className="relative">
       <div className="relative w-full">
@@ -23,15 +32,21 @@ export default function Home() {
               Lifestyle.
             </h1>
             <div className="flex flex-col md:flex-row gap-6 mt-12">
-              <div className="custom-button cairo uppercase text-center">Hire a coach</div>
-              <div className="uppercase cairo py-2 px-2 bg-white rounded-md shadow-lg font-semibold hover:shadow-none text-center">Login</div>
+              <Link href={`/trainer`}>
+                <div className="custom-button cairo uppercase text-center">Hire a coach</div>
+              </Link>
+              <div className="uppercase cairo py-2 px-2 bg-white rounded-md shadow-lg font-semibold hover:shadow-none text-center" onClick={() => {
+                loginToggler();
+              }}>Login</div>
             </div>
           </div>
         </div>
       </div>
       <About />
       <HowTo />
+      <Coach />
       <Footer />
+      {isLoginOpen && <Authentication onClick={loginToggler} />}
     </div>
 
   )

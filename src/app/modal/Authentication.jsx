@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Login from "./Login";
 import Register from "./Register";
 import Image from "next/image";
@@ -9,9 +9,14 @@ import Close from "@/icons/Close";
 export default function Authentication({ onClick }) {
   const [isLogin, setIsLogin] = useState(true);
   const toggleLogin = () => setIsLogin((prev) => !prev);
-
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
   return (
-    <div className="fixed top-0 left-0 w-full h-full md:flex justify-center sm:items-center">
+    <div className="fixed top-0 left-0 w-full h-full md:flex justify-center sm:items-center z-50">
       <div className="relative league text-white">
         <Image
           src="/loginBg.jpg"
