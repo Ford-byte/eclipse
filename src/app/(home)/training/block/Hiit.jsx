@@ -1,19 +1,7 @@
 import Link from "next/link";
+import benefits from "@/app/static/hiitBenefits.json";
 
 export default function Hiit() {
-  const benefits = [
-    "Improves Cardiovascular Health",
-    "Boosts heart health and endurance in a shorter time",
-    "Burns More Calories",
-    "Higher calorie burn during and after the workout due to the 'afterburn effect' (EPOC - Excess Post-Exercise Oxygen Consumption)",
-    "Builds Strength and Endurance",
-    "Combines strength and cardio elements",
-    "Convenient",
-    "Can be done without equipment and in small spaces",
-    "Enhances Metabolism",
-    "May boost metabolism for hours post-workout",
-  ];
-
   return (
     <div className="relative">
       <div className="py-12 flex flex-col gap-y-12 leading-6">

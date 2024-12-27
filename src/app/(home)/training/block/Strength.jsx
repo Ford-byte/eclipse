@@ -1,44 +1,6 @@
 import Link from "next/link";
-
+import benefits from "@/app/static/strengthBenefits.json"
 export default function Strength() {
-  const benefits = [
-    {
-      title: "Builds Muscle Mass",
-      list: [
-        "Promotes muscle growth through resistance training",
-        "Enhances muscle strength and endurance",
-      ],
-    },
-    {
-      title: "Improves Bone Density",
-      list: [
-        "Reduces the risk of osteoporosis",
-        "Strengthens bones by applying stress through weightlifting",
-      ],
-    },
-    {
-      title: "Boosts Metabolic Rate",
-      list: [
-        "Increases resting metabolism as muscle burns more calories than fat",
-        "Supports long-term weight management",
-      ],
-    },
-    {
-      title: "Enhances Functional Strength",
-      list: [
-        "Improves the ability to perform daily activities with ease",
-        "Reduces the risk of injury by strengthening stabilizing muscles",
-      ],
-    },
-    {
-      title: "Improves Mental Health",
-      list: [
-        "Boosts confidence and self-esteem",
-        "Releases endorphins that help reduce stress and improve mood",
-      ],
-    },
-  ];
-
   return (
     <div className="relative px-4 sm:px-6 lg:px-8">
       <div className="py-12 flex flex-col gap-y-12 leading-6">

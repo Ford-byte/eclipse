@@ -1,0 +1,26 @@
+[
+  {
+    "image": "/bench.jpg",
+    "intensity": "High",
+    "duration": "60",
+    "time": "seconds",
+    "description": "A compound exercise that targets the chest, shoulders, and triceps, while also engaging the core, back, and lower body ",
+    "title": "Bench Press"
+  },
+  {
+    "image": "/overhead.jpg",
+    "intensity": "High",
+    "duration": "60",
+    "time": "seconds",
+    "description": "The overhead press, also known as the shoulder press, military press, or strict press, is a weight training exercise that strengthens the upper body, particularly the shoulders and triceps.",
+    "title": "Overhead Press"
+  },
+  {
+    "image": "/bicep.jpg",
+    "intensity": "High",
+    "duration": "60",
+    "time": "seconds",
+    "description": "A bicep curl is an exercise that builds muscle and strength in the upper arm. Here are some tips for performing a bicep curl.",
+    "title": "Bicep Curls"
+  }
+]

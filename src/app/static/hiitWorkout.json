@@ -1,0 +1,26 @@
+[
+  {
+    "image": "/pushup.jpg",
+    "intensity": "High",
+    "duration": "60",
+    "time": "seconds",
+    "description": "A bodyweight exercise that targets the chest, shoulders, and triceps while also engaging the core and lower body for stability.",
+    "title": "Push-Up"
+  },
+  {
+    "image": "/climber.jpg",
+    "intensity": "High",
+    "duration": "60",
+    "time": "seconds",
+    "description": "A full-body cardio exercise that engages the core, legs, and arms, mimicking the motion of climbing to build strength and endurance.",
+    "title": "Mountain Climber"
+  },
+  {
+    "image": "/crunches.jpg",
+    "intensity": "High",
+    "duration": "60",
+    "time": "seconds",
+    "description": "An abdominal exercise that strengthens the core by isolating the upper abs and improving overall core stability.",
+    "title": "Crunches"
+  }
+]

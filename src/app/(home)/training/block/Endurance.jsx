@@ -1,44 +1,7 @@
 import Link from "next/link";
+import benefits from "@/app/static/enduranceBenefits.json";
 
 export default function Endurance() {
-  const benefits = [
-    {
-      title: "Improves Cardiovascular Health",
-      list: [
-        "Strengthens the heart, improving its ability to pump blood",
-        "Reduces the risk of heart disease",
-      ],
-    },
-    {
-      title: "Enhances Lung Capacity",
-      list: [
-        "Improves oxygen intake and delivery to muscles",
-        "Boosts overall stamina",
-      ],
-    },
-    {
-      title: "Increases Energy Levels",
-      list: [
-        "Boosts mitochondrial function for energy production at the cellular level",
-        "Helps reduce fatigue and sustain energy levels",
-      ],
-    },
-    {
-      title: "Burns Calories and Aids in Weight Management",
-      list: [
-        "Increases calorie expenditure",
-        "Supports maintaining or losing weight effectively",
-      ],
-    },
-    {
-      title: "Improves Mental Health",
-      list: [
-        "Releases endorphins that reduce stress, anxiety, and depression",
-        "Boosts mood and cognitive function",
-      ],
-    },
-  ];
-
   return (
     <div className="relative">
       <div className="py-12 flex flex-col gap-y-12 leading-6">
@@ -61,9 +24,7 @@ export default function Endurance() {
           <div className="text-justify w-full max-w-2xl">
             {benefits.map((item, index) => (
               <div key={index} className="mb-6">
-                <h2 className="font-bold text-lg md:text-xl">
-                  {item.title}
-                </h2>
+                <h2 className="font-bold text-lg md:text-xl">{item.title}</h2>
                 <ul className="list-disc list-inside pl-4">
                   {item.list.map((point, idx) => (
                     <li key={idx}>{point}</li>

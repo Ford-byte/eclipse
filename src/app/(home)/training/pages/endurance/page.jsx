@@ -1,37 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-
-export default function Strength() {
-  const workout = [
-    {
-      image: "/bench.jpg",
-      intensity: "High",
-      duration: "60",
-      time: "seconds",
-      description:
-        "A compound exercise that targets the chest, shoulders, and triceps, while also engaging the core, back, and lower body.",
-      title: "Bench Press",
-    },
-    {
-      image: "/overhead.jpg",
-      intensity: "High",
-      duration: "60",
-      time: "seconds",
-      description:
-        "The overhead press, also known as the shoulder press, military press, or strict press, is a weight training exercise that strengthens the upper body, particularly the shoulders and triceps.",
-      title: "Overhead Press",
-    },
-    {
-      image: "/bicep.jpg",
-      intensity: "High",
-      duration: "60",
-      time: "seconds",
-      description:
-        "A bicep curl is an exercise that builds muscle and strength in the upper arm. Here are some tips for performing a bicep curl.",
-      title: "Bicep Curls",
-    },
-  ];
-
+import workout from "@/app/static/enduranceWorkout.json";
+export default function Endurance() {
   return (
     <div>
       {/* Hero Section */}
@@ -55,8 +25,7 @@ export default function Strength() {
             key={index}
             className={`py-8 flex flex-col gap-y-6 ${
               index !== workout.length - 1 ? "border-b border-black" : ""
-            }`}
-          >
+            }`}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-gray-200 w-full h-[200px] sm:h-[250px] md:h-[300px]">
                 <Image
@@ -68,17 +37,22 @@ export default function Strength() {
                 />
               </div>
               <div className="flex flex-col justify-center items-start px-4 md:px-0">
-                <h1 className="header text-xl sm:text-2xl md:text-3xl pb-4">{item.title}</h1>
+                <h1 className="header text-xl sm:text-2xl md:text-3xl pb-4">
+                  {item.title}
+                </h1>
                 <div className="text-base sm:text-lg md:text-xl">
                   <p className="flex gap-2">
-                    <span className="font-semibold">Intensity:</span> {item.intensity}
+                    <span className="font-semibold">Intensity:</span>{" "}
+                    {item.intensity}
                   </p>
                   <p className="flex gap-2">
                     <span className="font-semibold">Duration:</span>{" "}
                     {item.duration} {item.time}
                   </p>
                 </div>
-                <p className="py-4 text-sm sm:text-base text-gray-700">{item.description}</p>
+                <p className="py-4 text-sm sm:text-base text-gray-700">
+                  {item.description}
+                </p>
               </div>
             </div>
           </div>

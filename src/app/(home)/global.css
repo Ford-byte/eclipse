@@ -59,3 +59,7 @@ body {
 .centralize {
   @apply w-full flex justify-center
 }
+
+.columnize {
+  @apply flex flex-col;
+}
